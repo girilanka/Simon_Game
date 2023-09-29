@@ -3,6 +3,7 @@
     font-family: cursive;
     color:orange;
     margin-top:25px;
+
 }
 
 
@@ -20,6 +21,7 @@ body{
     grid-template-columns:175px auto;
     grid-template-rows:175px auto;
     gap:50px;
+
 }
 
 .red{
@@ -45,7 +47,8 @@ body{
 .outline{
     border-radius:50%;
     border:10px solid black;
-    
+    box-shadow:10px 5px 20px 2px rgb(43, 37, 44);
+
 }
 
 .flex{
@@ -82,6 +85,7 @@ body{
         margin:50%;
         margin-top:100px;
         margin-bottom:50px;
+
     }
 
     
@@ -90,6 +94,7 @@ body{
         border:10px solid black;
         height:175px;
         width:175px;  
+        box-shadow:10px 5px 20px 2px rgb(43, 37, 44);
     }
     
 }  
