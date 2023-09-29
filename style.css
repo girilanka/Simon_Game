@@ -14,9 +14,9 @@ body{
     display:grid;
     height:400px;
     width:400px;
-    margin-left:35%;
-    margin-right:35%;
+    margin:20%;
     margin-top:5%;
+    margin-bottom:0;
     grid-template-columns:175px auto;
     grid-template-rows:175px auto;
     gap:50px;
@@ -45,6 +45,7 @@ body{
 .outline{
     border-radius:50%;
     border:10px solid black;
+    
 }
 
 .flex{
@@ -55,7 +56,6 @@ body{
 
 .flex-grid{
     display:flex;
-    height:400px;
     justify-content:center;
 }
 
@@ -71,7 +71,28 @@ body{
     opacity: 0.8;
 }
 
-  
+@media(max-width:780px){
+    .grid{
+        display:flex;
+        flex-direction:column;
+        margin-left:35%;
+        margin-right:35%;
+        margin-top:5%;
+        height:100%;
+        margin:50%;
+        margin-top:100px;
+        margin-bottom:50px;
+    }
+
+    
+    .outline{
+        border-radius:50%;
+        border:10px solid black;
+        height:175px;
+        width:175px;  
+    }
+    
+}  
 
   
   
