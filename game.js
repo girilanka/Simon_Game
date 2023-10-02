@@ -13,12 +13,11 @@ $(document).keypress(function() {
     }
   });
 
-
-
  
 
-  function nextSequence() {
-    userClickPattern = [];
+  function nextSequence() {		//nextSequence is clled for every level up to give another random color.
+
+    userClickPattern = [];		//This is empty because every time level changes the user has to enter from the starting .
     level++;
     $(".fonting").text("Level " + level);
     var randomNumber = Math.floor(Math.random() * 4);
@@ -29,7 +28,8 @@ $(document).keypress(function() {
     playSound(randomChosenColour);
 
   }
-  $(".outline").click(function() {
+
+  $(".outline").click(function() {          // User clicks the buttons of the same sequence as the computer generated sequence.
 
     var userChosenColour = $(this).attr("id");
     userClickPattern.push(userChosenColour);
@@ -41,7 +41,16 @@ $(document).keypress(function() {
     
   });
 
-  function checkPattern(currentLevel){
+  function start(){
+    if (level===0){
+      nextSequence();
+      $("button").hide();
+
+      
+    }
+  }
+
+  function checkPattern(currentLevel){  		// This function is called for every click to check whether the color is same on both arrays at "i"th index.
 
     if(gamePattern[currentLevel]===userClickPattern[currentLevel]){
         if(gamePattern.length===userClickPattern.length){
@@ -67,8 +76,8 @@ $(document).keypress(function() {
         setTimeout(function () {
           $("body").removeClass("game-over");
         }, 200);
-
-  
+        
+        $("button").show();
         startOver();
       }
   }

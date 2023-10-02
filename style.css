@@ -3,6 +3,7 @@
     font-family: cursive;
     color:orange;
     margin-top:25px;
+    margin-bottom:0;
 
 }
 
@@ -99,5 +100,12 @@ body{
     
 }  
 
+
+button{
+    background-color:pink;
+    border-radius:10px;
+    padding:6px;
+    width:200px;
+}
   
   
